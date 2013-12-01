@@ -5,3 +5,5 @@ mmenu-Bootstrap-3
 
 <p>mmenu: https://github.com/BeSite/jQuery.mmenu</p>
 <p>Botstrap 3: https://github.com/twbs/bootstrap?source=cc</p>
+<br>
+<h2>Demo: http://purgeru.github.io/mmenu-Bootstrap-3/ </h2>
