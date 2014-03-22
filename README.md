@@ -1,7 +1,7 @@
 mmenu-Bootstrap-3
 =================
 
-<<<<<<< HEAD
+
 <p>Left sliding mmenu navigation on small and regular navigation on large devices with Bootstrap 3 integration</p>
 
 <p>mmenu: https://github.com/BeSite/jQuery.mmenu</p>
@@ -10,4 +10,4 @@ mmenu-Bootstrap-3
 <h2>Demo: http://purgeru.github.io/mmenu-Bootstrap-3/ </h2>
 =======
 Left sliding mmenu navigation on small and regular navigation on large devices with Bootstrap 3 integration.
->>>>>>> merge-branch
+
