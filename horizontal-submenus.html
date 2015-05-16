@@ -5,7 +5,7 @@
 		<meta name="author" content="www.frebsite.nl" />
 		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
 
-		<title>jQuery.mmenu - Fixed header</title>
+		<title>jQuery.mmenu - Horizontal header</title>
 
 		<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
 
@@ -18,15 +18,14 @@
 		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 		<script type="text/javascript">
 			$(function() {
-				$('nav#menu').mmenu({
-					slidingSubmenus: false
-				});
+				$('nav#menu').mmenu();
 			});
 		</script>
 	</head>
 	<body>
 		<div id="page">
-			<div class="navbar-inverse navbar-fixed-top" role="navigation">
+
+			<div class="navbar-inverse" role="navigation">
 		        <div class="container">
 		            <div class="navbar-header">
 		            	<a href="#" class="navbar-brand hidden-xs"><strong>COMPANY LOGO</strong></a>
@@ -37,7 +36,7 @@
 		            	</div>
 		            </div>
 
-								<!-- Navigation on LARGE and MEDIUM screens -->
+					<!-- Navigation on LARGE and MEDIUM screens -->
 		            <div class="collapse navbar-collapse" role="navigation">
 		                <ul class="nav navbar-nav navbar-right hidden-xs">
 					        <li class="dropdown active">
@@ -49,7 +48,7 @@
 					          </ul>
 					        </li>
 					        <li><a href="index.html">Fixed header</a></li>
-					        <li><a href="horizontal-submenus.html">Horizontal submenus</a></li>
+					        <li><a href="horizontal-submenus.html" class="active">Horizontal submenus</a></li>
 					        <li><a href="left-right-mmenu.html">Left/Right menu</a></li>
 		                </ul>
 		            </div>
@@ -60,9 +59,8 @@
 
 
 			<div class="container">
-				<div class="padd-content"></div>
 				<div class="page-header">
-				  <h1>Example - Fixed header <small>Resize window</small></h1>
+				  <h1>Example - Horizontal submenus <small>Resize window</small></h1>
 				</div>
 				<div class="col-lg-8">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, dolorem, amet, sit accusantium aperiam adipisci deleniti iure soluta officiis eligendi earum velit itaque totam rem distinctio culpa laborum. Aliquid, alias, doloremque, dicta sed natus recusandae fuga cum rerum quaerat explicabo nostrum quis eaque iste facere corporis soluta earum veniam voluptatem quasi possimus minima modi fugiat repudiandae blanditiis ducimus dignissimos ea nam? Asperiores, quo suscipit similique consequatur facilis veniam distinctio quasi necessitatibus ducimus alias pariatur in eum aliquam eveniet tenetur sapiente nostrum corporis delectus facere rem sed illo perferendis perspiciatis. Asperiores, ad, fugiat, ducimus laborum temporibus aliquid deleniti ipsam sint aperiam necessitatibus dolorum delectus perspiciatis quod beatae veniam. Repudiandae, aliquam, quisquam, quo, nulla neque at nesciunt sequi officia placeat aut unde iusto vel molestiae maiores fugit? Unde, dolores adipisci totam ad explicabo consequatur fuga quaerat placeat praesentium asperiores! Obcaecati, sequi expedita explicabo odit laborum consequatur consequuntur placeat magni dolorem minus architecto mollitia ipsa ad perspiciatis itaque cum non id quidem veritatis error. Neque, obcaecati impedit officiis quaerat voluptatem repudiandae recusandae accusamus tempore! Dicta, eveniet, nihil, mollitia, dolores sunt dignissimos sit officiis neque molestias nesciunt veritatis praesentium molestiae consequuntur tempore quam totam repudiandae voluptatem inventore hic impedit aut quaerat nulla voluptatibus. Repudiandae.</p>
@@ -74,17 +72,17 @@
 			</div>
 
 			<!-- Navigation on SMALL screens (mmenu) -->
-			<nav id="menu" class="padd-menu">
+			<nav id="menu">
 				<ul>
 					<li>
-						<a href="#">Blank link</a>
+						<a href="index.html">Blank link</a>
 						<ul>
 							<li><a href="#">First sub-item</a></li>
 							<li><a href="#">Second sub-item</a></li>
 							<li><a href="#">Third sub-item</a></li>
 						</ul>
 					</li>
-		            <li><a href="index.html" class="active">Fixed header</a></li>
+		            <li><a href="index.html">Fixed header</a></li>
 					        <li><a href="horizontal-submenus.html">Horizontal submenus</a></li>
 				</ul>
 			</nav>
