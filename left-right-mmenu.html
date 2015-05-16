@@ -5,28 +5,31 @@
 		<meta name="author" content="www.frebsite.nl" />
 		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
 
-		<title>jQuery.mmenu - Left/Right menu</title>
+		<title>jQuery.mmenu - LEFT-RIGHT header</title>
 
-		<link type="text/css" rel="stylesheet" href="src/css/bootstrap/bootstrap.min.css" />
+		<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
 
 		<link type="text/css" rel="stylesheet" href="css/demo.css" />
-		<link type="text/css" rel="stylesheet" href="http://mmenu.frebsite.nl/mmenu/css/jquery.mmenu.all.css" />
-		
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		<script type="text/javascript" src="src/js/jquery.mmenu.js"></script>
-		<script type="text/javascript" src="src/js/bootstrap.min.js"></script>
+
+		<link type="text/css" rel="stylesheet" href="http://mmenu.frebsite.nl/mmenu/css/jquery.mmenu.all.css?v=5.2.0" />
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script type="text/javascript" src="http://mmenu.frebsite.nl/mmenu/js/jquery.mmenu.min.all.js?v=5.2.0"></script>
+		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 		<script type="text/javascript">
 			//	The menu on the left
 			$(function() {
-			  $('nav#menu-left').mmenu({
-			    dragOpen	: true});
+			  $('nav#menu-left').mmenu({});
 			});
 			//	The menu on the right
 			$(function() {
-			  $('nav#menu-right').mmenu({
-			    position	: 'right',
-			    dragOpen	: true});
+				$('nav#menu-right').mmenu({
+	               'offCanvas': {
+	                  'position': 'right'
+	               }
+	            });
 			});
+
 		</script>
 	</head>
 	<body>
@@ -36,7 +39,7 @@
 		        <div class="container">
 		            <div class="navbar-header">
 		            	<a href="#" class="navbar-brand hidden-xs"><strong>COMPANY LOGO</strong></a>
-						
+
 						<!--Button -->
 		            	<div id="header" class=" visible-xs">
 		            		<a href="#menu-left"></a>
@@ -58,7 +61,7 @@
 					        </li>
 					        <li><a href="index.html">Fixed header</a></li>
 					        <li><a href="horizontal-submenus.html">Horizontal submenus</a></li>
-					        <li><a href="left-right-mmenu.html">Left/Right menu</a></li>
+					        <li><a href="left-right-mmenu.html" class="active">Left/Right menu</a></li>
 		                </ul>
 		            </div>
 		            <!-- //Navigation on LARGE and MEDIUM screens -->
@@ -66,19 +69,21 @@
 		    </div>
 
 
-			
-			<div class="container padd-content">
+
+			<div class="container">
+				<div class="padd-content"></div>
 				<div class="page-header">
 				  <h1>Example - Fixed header <small>Resize window</small></h1>
 				</div>
 				<!-- sidebar -->
+
 		        <div class="col-sm-3 hidden-xs" role="navigation">
-		            <ul class="nav">
-		              <li class="active"><a href="#">Home</a></li>
-		              <li><a href="#">Link 1</a></li>
-		              <li><a href="#">Link 2</a></li>
-		              <li><a href="#">Link 3</a></li>              
-		            </ul>
+							<div class="list-group">
+								<a href="#" class="list-group-item">Home</a>
+								<a href="#" class="list-group-item">Link 1</a>
+								<a href="#" class="list-group-item">Link 2</a>
+								<a href="#" class="list-group-item">Link 1</a>
+							</div>
 		        </div>
 		        <!-- // sidebar -->
 				<div class="col-sm-6">

@@ -7,15 +7,15 @@
 
 		<title>jQuery.mmenu - Fixed header</title>
 
-		<link type="text/css" rel="stylesheet" href="src/css/bootstrap/bootstrap.min.css" />
+		<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
 
 		<link type="text/css" rel="stylesheet" href="css/demo.css" />
 
-		<link type="text/css" rel="stylesheet" href="http://mmenu.frebsite.nl/mmenu/css/jquery.mmenu.all.css" />
+		<link type="text/css" rel="stylesheet" href="http://mmenu.frebsite.nl/mmenu/css/jquery.mmenu.all.css?v=5.2.0" />
 
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		<script type="text/javascript" src="src/js/jquery.mmenu.js"></script>
-		<script type="text/javascript" src="src/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script type="text/javascript" src="http://mmenu.frebsite.nl/mmenu/js/jquery.mmenu.min.all.js?v=5.2.0"></script>
+		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 		<script type="text/javascript">
 			$(function() {
 				$('nav#menu').mmenu({
@@ -26,7 +26,6 @@
 	</head>
 	<body>
 		<div id="page">
-
 			<div class="navbar-inverse navbar-fixed-top" role="navigation">
 		        <div class="container">
 		            <div class="navbar-header">
@@ -38,7 +37,7 @@
 		            	</div>
 		            </div>
 
-					<!-- Navigation on LARGE and MEDIUM screens -->
+								<!-- Navigation on LARGE and MEDIUM screens -->
 		            <div class="collapse navbar-collapse" role="navigation">
 		                <ul class="nav navbar-nav navbar-right hidden-xs">
 					        <li class="dropdown active">
@@ -51,10 +50,7 @@
 					        </li>
 					        <li><a href="index.html">Fixed header</a></li>
 					        <li><a href="horizontal-submenus.html">Horizontal submenus</a></li>
-<<<<<<< HEAD
-=======
 					        <li><a href="left-right-mmenu.html">Left/Right menu</a></li>
->>>>>>> merge-branch
 		                </ul>
 		            </div>
 		            <!-- //Navigation on LARGE and MEDIUM screens -->
@@ -62,8 +58,9 @@
 		    </div>
 
 
-			
-			<div class="container padd-content">
+
+			<div class="container">
+				<div class="padd-content"></div>
 				<div class="page-header">
 				  <h1>Example - Fixed header <small>Resize window</small></h1>
 				</div>
@@ -87,7 +84,7 @@
 							<li><a href="#">Third sub-item</a></li>
 						</ul>
 					</li>
-		            <li><a href="index.html">Fixed header</a></li>
+		            <li><a href="index.html" class="active">Fixed header</a></li>
 					        <li><a href="horizontal-submenus.html">Horizontal submenus</a></li>
 				</ul>
 			</nav>
