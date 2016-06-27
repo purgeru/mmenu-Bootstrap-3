@@ -11,17 +11,31 @@
 
 		<link type="text/css" rel="stylesheet" href="css/demo.css" />
 
-		<link type="text/css" rel="stylesheet" href="http://mmenu.frebsite.nl/mmenu/core/css/jquery.mmenu.all.css?v=5.2.0" />
+		<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/5.6.4/css/jquery.mmenu.all.css" />
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script type="text/javascript" src="http://mmenu.frebsite.nl/mmenu/core/js/jquery.mmenu.min.all.js?v=5.2.0"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/5.6.4/js/jquery.mmenu.all.min.js"></script>
 		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<script type="text/javascript">
-			$(function() {
-				$('nav#menu').mmenu({
+			$( document ).ready(function() {
+			// Only loads mmenu if less than 768 px
+  			if (parseInt(jQuery(window).width()) < 768) {
+				// Initializes mmenu
+				$('#navbar').mmenu({
 					slidingSubmenus: false
 				});
-			});
+
+				// Rewires the default bootstrap hamburger to point to mmenu.
+				$(".navbar-header button").removeAttr("data-toggle data-target")
+				.removeClass('collapsed')
+				.wrap( "<a href='#navbar'></a>" );
+				// Pulls removes classes for dropdown menus/submenus
+				// TODO: toggle classes instead of remove to make development easier
+				$("#navbar li.dropdown").removeClass('dropdown');
+				$("#navbar ul.dropdown-menu").removeClass('dropdown-menu');
+				$("#navbar .caret").toggleClass('caret');
+			}
+		});
 		</script>
 	</head>
 	<body>
@@ -29,17 +43,16 @@
 			<div class="navbar-inverse navbar-fixed-top" role="navigation">
 		        <div class="container">
 		            <div class="navbar-header">
-		            	<a href="#" class="navbar-brand hidden-xs"><strong>COMPANY LOGO</strong></a>
-		            	<a href="#" class="navbar-brand visible-xs pull-right"><strong>COMPANY LOGO</strong></a>
-
-		            	<div id="header" class="visible-xs">
-		            		<a href="#menu"></a>
-		            	</div>
+		            	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		            		<span class="sr-only">Toggle navigation</span>
+		            		<span class="icon-bar"></span>
+		            		<span class="icon-bar"></span>
+		            		<span class="icon-bar"></span>
+		            	</button>
+		            	<a class="navbar-brand" href="#">Project name</a>
 		            </div>
-
-								<!-- Navigation on LARGE and MEDIUM screens -->
-		            <div class="collapse navbar-collapse" role="navigation">
-		                <ul class="nav navbar-nav navbar-right hidden-xs">
+		            <div id="navbar" class="navbar-collapse collapse" role="navigation">
+		                <ul class="nav navbar-nav navbar-right">
 					        <li class="dropdown active">
 					          <a id="drop4" role="button" data-toggle="dropdown" href="#">Blank link <b class="caret"></b></a>
 					          <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
@@ -53,7 +66,6 @@
 					        <li><a href="left-right-mmenu.html">Left/Right menu</a></li>
 		                </ul>
 		            </div>
-		            <!-- //Navigation on LARGE and MEDIUM screens -->
 		        </div>
 		    </div>
 
@@ -72,23 +84,6 @@
 					<a href="#">lorem ipsum</a>
 				</div>
 			</div>
-
-			<!-- Navigation on SMALL screens (mmenu) -->
-			<nav id="menu" class="padd-menu">
-				<ul>
-					<li>
-						<a href="#">Blank link</a>
-						<ul>
-							<li><a href="#">First sub-item</a></li>
-							<li><a href="#">Second sub-item</a></li>
-							<li><a href="#">Third sub-item</a></li>
-						</ul>
-					</li>
-		            <li><a href="index.html" class="active">Fixed header</a></li>
-					        <li><a href="horizontal-submenus.html">Horizontal submenus</a></li>
-				</ul>
-			</nav>
-			<!-- //Navigation on SMALL screens (mmenu) -->
 		</div>
 	</body>
 </html>
